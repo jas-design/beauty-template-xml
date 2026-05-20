@@ -1,43 +1,46 @@
 import { MessagesSquare, Search, Pill, HeartPulse } from 'lucide-react';
 import { motion } from 'motion/react';
-
-const steps = [
-  { 
-    step: "01", 
-    title: "Consultation", 
-    icon: MessagesSquare,
-    desc: "Fermentum quam a sapien at iaculis. Natoque amet hendrerit et turpis aenean."
-  },
-  { 
-    step: "02", 
-    title: "Analysis", 
-    icon: Search,
-    desc: "Fermentum quam a sapien at iaculis. Natoque amet hendrerit et turpis aenean."
-  },
-  { 
-    step: "03", 
-    title: "Treatment", 
-    icon: Pill,
-    desc: "Fermentum quam a sapien at iaculis. Natoque amet hendrerit et turpis aenean.",
-    highlight: true
-  },
-  { 
-    step: "04", 
-    title: "Ongoing Care", 
-    icon: HeartPulse,
-    desc: "Fermentum quam a sapien at iaculis. Natoque amet hendrerit et turpis aenean."
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function HowItWorks() {
+  const { t } = useTranslation();
+
+  const steps = [
+    { 
+      step: "01", 
+      title: t('how_it_works.steps.s1_title'), 
+      icon: MessagesSquare,
+      desc: t('how_it_works.steps.s1_desc')
+    },
+    { 
+      step: "02", 
+      title: t('how_it_works.steps.s2_title'), 
+      icon: Search,
+      desc: t('how_it_works.steps.s2_desc')
+    },
+    { 
+      step: "03", 
+      title: t('how_it_works.steps.s3_title'), 
+      icon: Pill,
+      desc: t('how_it_works.steps.s3_desc'),
+      highlight: true
+    },
+    { 
+      step: "04", 
+      title: t('how_it_works.steps.s4_title'), 
+      icon: HeartPulse,
+      desc: t('how_it_works.steps.s4_desc')
+    }
+  ];
+
   return (
     <section className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-6 mb-24">
-          <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">HOW IT WORKS</div>
-          <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight">Treat your skin with the best treatment</h2>
+          <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">{t('how_it_works.badge')}</div>
+          <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight">{t('how_it_works.title')}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-[16px] leading-relaxed">
-            Ultricies auctor aptent imperdiet venenatis volutpat ornare ante enim vel nec facilisis. Ac tempor quisque egestas molestie tortor.
+            {t('how_it_works.description')}
           </p>
         </div>
 
@@ -53,7 +56,7 @@ export function HowItWorks() {
              >
                 {/* Step Badge */}
                 <div className="absolute top-0 right-0 bg-[#2D999B] text-white px-4 py-2 text-[11px] font-bold rounded-bl-[10px] tracking-wider z-10">
-                   STEP {s.step}
+                   {t('how_it_works.steps.step_label')} {s.step}
                 </div>
 
                 {/* Icon Section */}

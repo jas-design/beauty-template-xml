@@ -2,24 +2,26 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import interiorImg from '../../assets/images/clinic_interior_1779219942247.png';
 import treatmentImg from '../../assets/images/treatment_skincare_1779219956804.png';
+import { useTranslation } from 'react-i18next';
 
 export function AboutPreview() {
+  const { t } = useTranslation();
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div className="space-y-8 order-2 lg:order-1">
-          <div className="text-secondary font-bold uppercase tracking-widest text-xs">About Cutisure</div>
+          <div className="text-secondary font-bold uppercase tracking-widest text-xs">{t('about_preview.badge')}</div>
           <h2 className="text-5xl font-serif leading-tight text-primary">
-            Discover the True Glow of Healthy and Beautiful Skin
+            {t('about_preview.title')}
           </h2>
           <p className="text-sm font-bold border-l-2 border-secondary pl-6 italic text-charcoal/60">
-            Eget ligula mattis donec orci sem faucibus gravida non felis magna nascetuer. Faucibus hendrerit sed ex ultrices ornare vel molestie libero pulvinar mattis donec faucibus.
+            {t('about_preview.quote')}
           </p>
           <p className="text-sm text-charcoal/50 leading-relaxed">
-            Founded with a passion for precise aesthetics, Cutisure Beauty Clinic combines medical-grade technology with a luxury spa environment. Our mission is to enhance your natural beauty through personalized skin journeys.
+            {t('about_preview.desc_1')}
           </p>
           <p className="text-sm text-charcoal/50 leading-relaxed">
-            Curabitur aptent condimentum vehicula lobortis commodo torquent aliquet. Volutpat vitae potenti et placerat sapien nisl nostra mi.
+            {t('about_preview.desc_2')}
           </p>
 
           <div className="pt-4">
@@ -27,7 +29,7 @@ export function AboutPreview() {
               to="/about"
               className="px-8 py-3 bg-accent text-charcoal rounded-full font-bold text-xs uppercase tracking-widest hover:shadow-lg transition-all inline-block"
             >
-              More About Us
+              {t('about_preview.cta')}
             </Link>
           </div>
         </div>
@@ -58,9 +60,9 @@ export function AboutPreview() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="absolute -top-10 left-[10%] bg-[#2D999B] rounded-full w-44 h-44 flex flex-col items-center justify-center text-white shadow-2xl z-30 text-center border-[8px] border-white"
           >
-             <div className="text-[52px] font-serif font-medium text-[#D4E964] leading-none mb-1">15+</div>
+             <div className="text-[52px] font-serif font-medium text-[#D4E964] leading-none mb-1">{t('about_preview.stats.years')}</div>
              <div className="text-[12px] font-bold uppercase tracking-widest leading-tight">
-               Years Of <br /> Experience
+               {t('about_preview.stats.label')}
              </div>
           </motion.div>
         </div>

@@ -2,32 +2,34 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronsRight, ChevronDown } from 'lucide-react';
 import { cn } from '../../lib/utils';
-
-const faqs = [
-  {
-    q: "Why choose us for your projects?",
-    a: "Fusce netus ligula arcu pretium enim elit interdum dolor nisl ridiculus aptent. Vitae ut conubia nostra eros ligula justo metus auctor luctus hendrerit interdum."
-  },
-  {
-    q: "How we provide services for you?",
-    a: "Litora augue id suspendisse fermentum finibus lacinia tortor aliquet aliquam sagittis. Mauris sit amet ligula id eros ullamcorper interdum sed vel metus."
-  },
-  {
-    q: "About content creation, can i participate in the idea?",
-    a: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Viva mus magna justo, lacinia eget consectetur sed, convallis at tellus."
-  },
-  {
-    q: "How we are affordable than others?",
-    a: "Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh."
-  },
-  {
-    q: "What payment methods are available?",
-    a: "Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet."
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function FAQ() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      q: t('faq.items.q1'),
+      a: t('faq.items.a1')
+    },
+    {
+      q: t('faq.items.q2'),
+      a: t('faq.items.a2')
+    },
+    {
+      q: t('faq.items.q3'),
+      a: t('faq.items.a3')
+    },
+    {
+      q: t('faq.items.q4'),
+      a: t('faq.items.a4')
+    },
+    {
+      q: t('faq.items.q5'),
+      a: t('faq.items.a5')
+    }
+  ];
 
   return (
     <section className="py-24 bg-white px-6 md:px-12">
@@ -46,9 +48,9 @@ export function FAQ() {
             
             {/* Float Box Card */}
             <div className="absolute bottom-6 left-6 right-6 bg-[#E6F5F5]/95 backdrop-blur-sm p-6 lg:p-8 rounded-[25px] border border-white/20 shadow-lg z-20">
-              <h4 className="font-serif text-xl font-medium text-charcoal mb-2">Still Have Questions?</h4>
+              <h4 className="font-serif text-xl font-medium text-charcoal mb-2">{t('faq.still_questions.title')}</h4>
               <p className="text-sm text-charcoal/60 leading-relaxed">
-                Aliquam nullam nisl dolor congue a feugiat ligula cursus quisque maximus.
+                {t('faq.still_questions.desc')}
               </p>
             </div>
           </div>
@@ -57,12 +59,12 @@ export function FAQ() {
         {/* Right: FAQ Content */}
         <div className="space-y-12">
           <div className="space-y-6">
-            <span className="text-[#3CB3AB] font-bold uppercase tracking-[0.2em] text-[12px]">HAVE QUESTIONS?</span>
+            <span className="text-[#3CB3AB] font-bold uppercase tracking-[0.2em] text-[12px]">{t('faq.badge')}</span>
             <h2 className="text-5xl md:text-6xl font-serif text-charcoal leading-[1.1] font-medium">
-              Frequently Asked Questions
+              {t('faq.title')}
             </h2>
             <p className="text-charcoal/60 leading-relaxed max-w-xl">
-              Litora augue id suspendisse nascetur fermentum finibus lacinia tortor aliquet aliquam sagittis.
+              {t('faq.description')}
             </p>
           </div>
 

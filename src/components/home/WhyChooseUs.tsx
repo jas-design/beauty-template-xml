@@ -9,17 +9,17 @@ export function WhyChooseUs() {
     { 
       title: t('why_choose_us.benefits.safe'), 
       icon: HeartPulse,
-      desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
+      desc: t('why_choose_us.benefit_desc')
     },
     { 
       title: t('why_choose_us.benefits.equip'), 
       icon: Stethoscope,
-      desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
+      desc: t('why_choose_us.benefit_desc')
     },
     { 
       title: t('why_choose_us.benefits.support'), 
       icon: MessageSquareMore,
-      desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
+      desc: t('why_choose_us.benefit_desc')
     }
   ];
 

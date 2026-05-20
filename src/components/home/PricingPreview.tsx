@@ -2,67 +2,70 @@ import { motion } from 'motion/react';
 import { Check, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '../../lib/utils';
-
-const plans = [
-  {
-    name: 'Starter Plan',
-    price: '$79',
-    period: '/ Session',
-    desc: 'Etiam pharetra nulla elementum tempus curae nam vel leo dictum sapien.',
-    features: [
-      'General Chekup',
-      'Skin Consultation',
-      'Basic Skin Analysis',
-      'Skincare Advice',
-      'Advanced Treatment'
-    ],
-    highlight: false
-  },
-  {
-    name: 'Premium Plan',
-    price: '$99',
-    period: '/ Session',
-    desc: 'Etiam pharetra nulla elementum tempus curae nam vel leo dictum sapien.',
-    features: [
-      'General Chekup',
-      'Skin Consultation',
-      'Basic Skin Analysis',
-      'Skincare Advice',
-      'Advanced Treatment'
-    ],
-    highlight: true
-  },
-  {
-    name: 'Luxury Plan',
-    price: '$199',
-    period: '/ Session',
-    desc: 'Etiam pharetra nulla elementum tempus curae nam vel leo dictum sapien.',
-    features: [
-      'General Chekup',
-      'Skin Consultation',
-      'Basic Skin Analysis',
-      'Skincare Advice',
-      'Advanced Treatment'
-    ],
-    highlight: false
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function PricingPreview() {
+  const { t } = useTranslation();
+
+  const plans = [
+    {
+      name: t('pricing_preview.plans.starter'),
+      price: t('pricing_preview.plans.starter_price'),
+      period: t('pricing_preview.period'),
+      desc: t('pricing_preview.plan_desc'),
+      features: [
+        t('pricing_preview.features.checkup'),
+        t('pricing_preview.features.consult'),
+        t('pricing_preview.features.analysis'),
+        t('pricing_preview.features.advice'),
+        t('pricing_preview.features.advanced')
+      ],
+      highlight: false
+    },
+    {
+      name: t('pricing_preview.plans.premium'),
+      price: t('pricing_preview.plans.premium_price'),
+      period: t('pricing_preview.period'),
+      desc: t('pricing_preview.plan_desc'),
+      features: [
+        t('pricing_preview.features.checkup'),
+        t('pricing_preview.features.consult'),
+        t('pricing_preview.features.analysis'),
+        t('pricing_preview.features.advice'),
+        t('pricing_preview.features.advanced')
+      ],
+      highlight: true
+    },
+    {
+      name: t('pricing_preview.plans.luxury'),
+      price: t('pricing_preview.plans.luxury_price'),
+      period: t('pricing_preview.period'),
+      desc: t('pricing_preview.plan_desc'),
+      features: [
+        t('pricing_preview.features.checkup'),
+        t('pricing_preview.features.consult'),
+        t('pricing_preview.features.analysis'),
+        t('pricing_preview.features.advice'),
+        t('pricing_preview.features.advanced')
+      ],
+      highlight: false
+    }
+  ];
+
   return (
     <section className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
           <div className="space-y-4">
-            <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">CHOOSE PACKAGE</div>
-            <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight max-w-xl">Care for Your Skin, Enhance Your Beauty</h2>
+            <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">{t('pricing_preview.badge')}</div>
+            <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight max-w-xl">{t('pricing_preview.title')}</h2>
           </div>
           <div className="max-w-sm space-y-6 lg:text-left pt-10">
             <p className="text-gray-400 text-[15px] leading-relaxed">
-               Sem lorem eget tempor taciti felis rutrum eleifend est cras montes. Auctor leo dictumst duis dui velit magnis lorem eleifend.
+               {t('pricing_preview.desc')}
             </p>
             <Link to="/pricing" className="text-[#1A1A1A] font-bold text-[15px] hover:text-[#2D999B] transition-colors inline-flex items-center gap-2 border-b-2 border-[#1A1A1A] pb-0.5">
-               Custom Package <ArrowRight size={16} />
+               {t('pricing_preview.cta')} <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -94,13 +97,13 @@ export function PricingPreview() {
                   to="/book" 
                   className="w-full py-4 bg-[#D4E964] text-[#1A1A1A] rounded-full font-bold text-[14px] transition-all hover:brightness-105 shadow-md"
                 >
-                  Purchase Now
+                  {t('pricing_preview.purchase')}
                 </Link>
               </div>
 
               {/* Bottom Feature List Section */}
               <div className="p-12 pb-16 flex-1 bg-white">
-                <h4 className="text-[14px] font-bold text-[#1A1A1A] mb-8">Package include:</h4>
+                <h4 className="text-[14px] font-bold text-[#1A1A1A] mb-8">{t('pricing_preview.include')}</h4>
                 <ul className="space-y-0 text-gray-500">
                   {plan.features.map((feature, fIdx) => (
                     <li 

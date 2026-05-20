@@ -1,24 +1,26 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-const testimonials = [
-  {
-    name: 'Paula J. Perri',
-    role: 'Model / Artist',
-    text: 'The specialists at Cutisure provided exceptional skincare service with real results. Their personalized approach and advanced treatments gave me more confidence in my skin every day.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150'
-  },
-  {
-    name: 'Sarah Jenkins',
-    role: 'Senior Designer',
-    text: 'I have tried many clinics, but Cutisure is by far the best. The team is professional, and the results are visible from the first session. Highly recommended!',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function Testimonials() {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
+
+  const testimonials = [
+    {
+      name: 'Paula J. Perri',
+      role: t('testimonials.roles.model'),
+      text: 'The specialists at Cutisure provided exceptional skincare service with real results. Their personalized approach and advanced treatments gave me more confidence in my skin every day.',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150'
+    },
+    {
+      name: 'Sarah Jenkins',
+      role: t('testimonials.roles.designer'),
+      text: 'I have tried many clinics, but Cutisure is by far the best. The team is professional, and the results are visible from the first session. Highly recommended!',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150'
+    }
+  ];
 
   const next = () => setIndex((i) => (i + 1) % testimonials.length);
   const prev = () => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length);
@@ -57,77 +59,77 @@ export function Testimonials() {
           <div className="w-full lg:w-[45%] shrink-0 relative z-10">
              <div className="rounded-[20px] overflow-hidden aspect-[4/3] min-h-[400px] shadow-sm bg-white">
                 <AnimatePresence mode="wait">
-                  <motion.img 
-                    key={index}
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.6 }}
-                    src={index === 0 ? "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?auto=format&fit=crop&q=80&w=1000" : "https://images.unsplash.com/photo-1570172619380-2aa063da5da8?auto=format&fit=crop&q=80&w=1000"} 
-                    className="w-full h-full object-cover" 
-                    alt="Testimonial Model" 
-                  />
+                   <motion.img 
+                     key={index}
+                     initial={{ opacity: 0, scale: 1.1 }}
+                     animate={{ opacity: 1, scale: 1 }}
+                     exit={{ opacity: 0, scale: 0.95 }}
+                     transition={{ duration: 0.6 }}
+                     src={index === 0 ? "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?auto=format&fit=crop&q=80&w=1000" : "https://images.unsplash.com/photo-1570172619380-2aa063da5da8?auto=format&fit=crop&q=80&w=1000"} 
+                     className="w-full h-full object-cover" 
+                     alt="Testimonial Model" 
+                   />
                 </AnimatePresence>
              </div>
           </div>
 
           {/* Right: Content Container */}
           <div className="flex-1 space-y-10 relative z-10">
-             <h2 className="text-[48px] font-serif text-[#1A1A1A] leading-tight">What they say about us</h2>
+             <h2 className="text-[48px] font-serif text-[#1A1A1A] leading-tight">{t('testimonials.title')}</h2>
              
              <div className="space-y-10">
                 <div className="min-h-[120px] relative">
-                  <AnimatePresence mode="wait">
-                    <motion.p 
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      className="text-[17px] text-gray-500 leading-relaxed max-w-[550px] font-sans"
-                    >
-                      {testimonials[index].text}
-                    </motion.p>
-                  </AnimatePresence>
+                   <AnimatePresence mode="wait">
+                     <motion.p 
+                       key={index}
+                       initial={{ opacity: 0, x: 20 }}
+                       animate={{ opacity: 1, x: 0 }}
+                       exit={{ opacity: 0, x: -20 }}
+                       className="text-[17px] text-gray-500 leading-relaxed max-w-[550px] font-sans"
+                     >
+                       {testimonials[index].text}
+                     </motion.p>
+                   </AnimatePresence>
                 </div>
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                  <AnimatePresence mode="wait">
-                    <motion.div 
-                      key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="flex items-center gap-6"
-                    >
-                       <div className="w-20 h-20 rounded-full overflow-hidden border-[4px] border-white shadow-xl bg-white">
-                          <img 
-                            src={testimonials[index].image} 
-                            className="w-full h-full object-cover" 
-                            alt={testimonials[index].name} 
-                          />
-                       </div>
-                       <div className="space-y-1">
-                          <h4 className="text-[20px] font-serif font-bold text-[#1A1A1A]">{testimonials[index].name}</h4>
-                          <p className="text-[13px] text-gray-400 font-medium tracking-wide uppercase">{testimonials[index].role}</p>
-                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                   <AnimatePresence mode="wait">
+                     <motion.div 
+                       key={index}
+                       initial={{ opacity: 0, y: 10 }}
+                       animate={{ opacity: 1, y: 0 }}
+                       exit={{ opacity: 0, y: -10 }}
+                       className="flex items-center gap-6"
+                     >
+                        <div className="w-20 h-20 rounded-full overflow-hidden border-[4px] border-white shadow-xl bg-white">
+                           <img 
+                             src={testimonials[index].image} 
+                             className="w-full h-full object-cover" 
+                             alt={testimonials[index].name} 
+                           />
+                        </div>
+                        <div className="space-y-1">
+                           <h4 className="text-[20px] font-serif font-bold text-[#1A1A1A]">{testimonials[index].name}</h4>
+                           <p className="text-[13px] text-gray-400 font-medium tracking-wide uppercase">{testimonials[index].role}</p>
+                        </div>
+                     </motion.div>
+                   </AnimatePresence>
 
-                  {/* Navigation Controls */}
-                  <div className="flex gap-4">
-                    <button 
-                      onClick={prev}
-                      className="w-12 h-12 rounded-full border border-[#2D999B]/20 flex items-center justify-center text-[#2D999B] hover:bg-[#2D999B] hover:text-white transition-all shadow-sm"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
-                    <button 
-                      onClick={next}
-                      className="w-12 h-12 rounded-full border border-[#2D999B]/20 flex items-center justify-center text-[#2D999B] hover:bg-[#2D999B] hover:text-white transition-all shadow-sm"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
-                  </div>
+                   {/* Navigation Controls */}
+                   <div className="flex gap-4">
+                     <button 
+                       onClick={prev}
+                       className="w-12 h-12 rounded-full border border-[#2D999B]/20 flex items-center justify-center text-[#2D999B] hover:bg-[#2D999B] hover:text-white transition-all shadow-sm"
+                     >
+                       <ChevronLeft size={20} />
+                     </button>
+                     <button 
+                       onClick={next}
+                       className="w-12 h-12 rounded-full border border-[#2D999B]/20 flex items-center justify-center text-[#2D999B] hover:bg-[#2D999B] hover:text-white transition-all shadow-sm"
+                     >
+                       <ChevronRight size={20} />
+                     </button>
+                   </div>
                 </div>
              </div>
           </div>

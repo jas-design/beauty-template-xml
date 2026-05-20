@@ -1,7 +1,9 @@
 import { Play } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 export function VideoSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-24 bg-white">
       <div className="w-full px-[3%]">
@@ -25,7 +27,9 @@ export function VideoSection() {
                 whileTap={{ scale: 0.95 }}
                 className="w-32 h-32 bg-white rounded-full flex items-center justify-center text-[#209797] shadow-[0_0_50px_rgba(255,255,255,0.3)] transition-all group"
               >
-                <Play size={44} fill="currentColor" strokeWidth={0} className="ml-2 group-hover:scale-110 transition-transform" />
+                <div className="ml-2 group-hover:scale-110 transition-transform">
+                  <Play size={44} fill="currentColor" strokeWidth={0} />
+                </div>
               </motion.button>
             </div>
 
@@ -36,10 +40,10 @@ export function VideoSection() {
               
               <div className="space-y-6 py-4">
                 <h2 className="text-[52px] font-serif font-medium leading-[1.2] tracking-tight">
-                  Beauty Starts with Loving <br /> Your Own Skin
+                  {t('video_section.title_1')} <br /> {t('video_section.title_2')}
                 </h2>
                 <p className="text-[15px] opacity-90 leading-relaxed max-w-xl font-sans font-light">
-                  Fermentum dignissim turpis pellentesque nisi sociosqu. Si dui faucibus egestas condimentum vehicula. Ultricies eu conubia letius imperdiet arcu penatibus.
+                  {t('video_section.description')}
                 </p>
                 <div className="pt-4">
                   <motion.button 
@@ -47,7 +51,7 @@ export function VideoSection() {
                     whileTap={{ scale: 0.98 }}
                     className="px-10 py-4 bg-[#D4E964] text-[#1A1A1A] rounded-full font-bold text-[14px] transition-all shadow-xl hover:brightness-105"
                   >
-                    Discover More
+                    {t('video_section.cta')}
                   </motion.button>
                 </div>
               </div>

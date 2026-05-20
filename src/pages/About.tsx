@@ -83,9 +83,9 @@ export function About() {
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { name: "Dr. Elena Rossi", role: "Medical Director", img: "https://images.unsplash.com/photo-1559839734-2b71f1e3c770?auto=format&fit=crop&q=80&w=400&h=500" },
-                { name: "Julianne Thorne", role: "Elite Esthetician", img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400&h=500" },
-                { name: "Marcus Sterling", role: "Laser Specialist", img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400&h=500" }
+                { name: "Dr. Elena Rossi", role: t('about_page.team.roles.director'), img: "https://images.unsplash.com/photo-1559839734-2b71f1e3c770?auto=format&fit=crop&q=80&w=400&h=500" },
+                { name: "Julianne Thorne", role: t('about_page.team.roles.esthetician'), img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400&h=500" },
+                { name: "Marcus Sterling", role: t('about_page.team.roles.specialist'), img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400&h=500" }
               ].map((member, idx) => (
                 <motion.div
                   key={member.name}

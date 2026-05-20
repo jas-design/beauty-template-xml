@@ -12,17 +12,17 @@ export function Services() {
       name: t('services_page.categories.facial'),
       items: [
         {
-          title: "Signature HydraFacial",
-          price: `${t('services_page.actions.from')} $199`,
-          duration: "60 mins",
-          desc: "Clinically proven to detoxify and hydrate the skin with immediate results.",
+          title: t('services_page.service_details.hydrafacial.title'),
+          price: `${t('services_page.actions.from')} ${t('services_page.service_details.hydrafacial.price')}`,
+          duration: `60 ${t('services_page.labels.min')}`,
+          desc: t('services_page.service_details.hydrafacial.desc'),
           icon: Droplet
         },
         {
-          title: "Customized Medical Facial",
-          price: `${t('services_page.actions.from')} $175`,
-          duration: "75 mins",
-          desc: "Tailored to your specific skin concerns using pharmaceutical-grade products.",
+          title: t('services_page.service_details.medical_facial.title'),
+          price: `${t('services_page.actions.from')} ${t('services_page.service_details.medical_facial.price')}`,
+          duration: `75 ${t('services_page.labels.min')}`,
+          desc: t('services_page.service_details.medical_facial.desc'),
           icon: ShieldCheck
         }
       ]
@@ -31,17 +31,17 @@ export function Services() {
       name: t('services_page.categories.medical'),
       items: [
         {
-          title: "Injectables & Dermal Fillers",
-          price: t('services_page.actions.by_consult'),
-          duration: "30 mins",
-          desc: "Expertly administered by board-certified specialists for natural enhancements.",
+          title: t('services_page.service_details.injectables.title'),
+          price: t('services_page.service_details.injectables.price'),
+          duration: `30 ${t('services_page.labels.min')}`,
+          desc: t('services_page.service_details.injectables.desc'),
           icon: Sparkles
         },
         {
-          title: "Microneedling with PRP",
-          price: `${t('services_page.actions.from')} $450`,
-          duration: "90 mins",
-          desc: "Maximize skin regeneration and collagen production.",
+          title: t('services_page.service_details.microneedling.title'),
+          price: `${t('services_page.actions.from')} ${t('services_page.service_details.microneedling.price')}`,
+          duration: `90 ${t('services_page.labels.min')}`,
+          desc: t('services_page.service_details.microneedling.desc'),
           icon: Microscope
         }
       ]
@@ -50,17 +50,17 @@ export function Services() {
       name: t('services_page.categories.laser'),
       items: [
         {
-          title: "Laser Hair Removal",
-          price: `${t('services_page.actions.from')} $150`,
-          duration: "45 mins",
-          desc: "State-of-the-art laser technology for painless and permanent hair reduction.",
+          title: t('services_page.service_details.laser_hair.title'),
+          price: `${t('services_page.actions.from')} ${t('services_page.service_details.laser_hair.price')}`,
+          duration: `45 ${t('services_page.labels.min')}`,
+          desc: t('services_page.service_details.laser_hair.desc'),
           icon: Zap
         },
         {
-          title: "IPL Photofacial",
-          price: `${t('services_page.actions.from')} $300`,
-          duration: "60 mins",
-          desc: "Address sun damage, redness, and uneven skin tone precisely.",
+          title: t('services_page.service_details.ipl.title'),
+          price: `${t('services_page.actions.from')} ${t('services_page.service_details.ipl.price')}`,
+          duration: `60 ${t('services_page.labels.min')}`,
+          desc: t('services_page.service_details.ipl.desc'),
           icon: Waves
         }
       ]

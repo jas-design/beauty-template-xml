@@ -9,17 +9,17 @@ export function ServiceShowcase() {
     { 
       title: t('services_preview.service_list.face'), 
       icon: User, 
-      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+      desc: t('services_preview.service_desc')
     },
     { 
       title: t('services_preview.service_list.filler'), 
       icon: Syringe, 
-      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+      desc: t('services_preview.service_desc')
     },
     { 
       title: t('services_preview.service_list.plastic'), 
       icon: Scissors, 
-      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+      desc: t('services_preview.service_desc')
     }
   ];
 
@@ -27,17 +27,17 @@ export function ServiceShowcase() {
     { 
       title: t('services_preview.service_list.body'), 
       icon: HeartPulse, 
-      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+      desc: t('services_preview.service_desc')
     },
     { 
       title: t('services_preview.service_list.breast'), 
       icon: Maximize2, 
-      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+      desc: t('services_preview.service_desc')
     },
     { 
       title: t('services_preview.service_list.lip'), 
       icon: MoveUp, 
-      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+      desc: t('services_preview.service_desc')
     }
   ];
 

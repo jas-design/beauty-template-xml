@@ -67,7 +67,7 @@ export function Footer() {
                <span className="w-10 h-[2px] bg-[#D4E95F] mt-3" />
              </h4>
              <ul className="space-y-4 text-sm text-white/70 font-light mt-8">
-                {["Face Treatment", "Manicure & Pedicure", "Lips Treatment", "Filler & Botox", "Body Care"].map(item => (
+                {(t('footer.services_list', { returnObjects: true }) as string[]).map(item => (
                   <li key={item} className="hover:text-[#D4E95F] transition-colors cursor-pointer">{item}</li>
                 ))}
              </ul>
@@ -80,7 +80,7 @@ export function Footer() {
                <span className="w-10 h-[2px] bg-[#D4E95F] mt-3" />
              </h4>
              <ul className="space-y-4 text-sm text-white/70 font-light mt-8">
-                {["About Us", "Leadership", "Careers", "News & Article", "Legal Notice"].map(item => (
+                {(t('footer.links_list', { returnObjects: true }) as string[]).map(item => (
                   <li key={item} className="hover:text-[#D4E95F] transition-colors cursor-pointer">{item}</li>
                 ))}
              </ul>
