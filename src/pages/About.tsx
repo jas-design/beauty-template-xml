@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Microscope, Target, Heart, Award } from 'lucide-react';
+import { ArrowRight, Microscope, Target, Heart, Award, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import interiorImg from '../assets/images/clinic_interior_1779219942247.png';
 import { useTranslation } from 'react-i18next';
@@ -7,17 +7,52 @@ import { useTranslation } from 'react-i18next';
 export function About() {
   const { t } = useTranslation();
   return (
-    <div className="pt-32 bg-white overflow-hidden">
-      {/* Hero Section */}
-      <section className="px-6 mb-24 max-w-7xl mx-auto">
+    <div className="flex flex-col min-h-screen bg-white">
+      {/* Hero Section Wrapper */}
+      <div className="bg-[#E6F8F9] pt-24 pb-4">
+        <section className="relative mx-4 sm:mx-6 md:mx-8 mt-4 mb-4 rounded-[32px] bg-[#A5E3E6] overflow-hidden py-16 md:py-20 px-8 md:px-16 lg:px-24 border border-[#ACE3E7]/40 shadow-sm">
+          {/* Soft Floral Watermark/Background */}
+          <div className="absolute inset-0 opacity-[0.55] pointer-events-none select-none">
+            <img 
+              src="https://images.unsplash.com/photo-1516238840914-94dfc0c3a5e8?auto=format&fit=crop&q=80&w=1800" 
+              className="w-full h-full object-cover"
+              alt=""
+            />
+            {/* Subtle fade overlay to preserve text contrast on the left & blend image perfectly */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#A5E3E6] via-[#A5E3E6]/60 to-transparent" />
+          </div>
+          
+          <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 w-full">
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl sm:text-5xl md:text-[56px] font-serif font-medium text-charcoal tracking-tight leading-tight">
+                {t('about_page.hero.title_1')} <span className="italic text-[#1F8D92]">{t('about_page.hero.title_2')}</span> {t('about_page.hero.title_3')}
+              </h1>
+              <p className="text-charcoal/70 font-sans text-sm md:text-base leading-relaxed max-w-xl">
+                {t('about_page.hero.description')}
+              </p>
+            </div>
+            
+            <div className="bg-[#1F8D92] rounded-full px-6 py-3 md:px-8 md:py-4 flex items-center gap-3 text-white text-[11px] sm:text-[12px] font-sans font-bold uppercase tracking-[0.15em] shadow-[0_4px_20px_rgba(31,141,146,0.15)] select-none animate-fade-in shrink-0">
+              <span className="opacity-80 hover:opacity-100 transition-opacity cursor-pointer">{t('contact_page.hero.breadcrumb.home')}</span>
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#D4E95F] text-[#1F8D92] shrink-0">
+                <ChevronRight size={11} className="stroke-[3.5]" />
+              </span>
+              <span className="text-[#D4E95F]">{t('nav.about')}</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Story Details Section */}
+      <section className="py-16 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div className="text-primary font-bold uppercase tracking-widest text-sm">{t('about_page.hero.badge')}</div>
-            <h1 className="text-5xl md:text-6xl font-serif leading-tight">
-              {t('about_page.hero.title_1')} <span className="text-primary italic">{t('about_page.hero.title_2')}</span> {t('about_page.hero.title_3')}
-            </h1>
-            <p className="text-lg text-charcoal/60 leading-relaxed max-w-xl">
-              {t('about_page.hero.description')}
+            <h2 className="text-3xl md:text-4xl font-serif leading-tight text-charcoal">
+              Redefining Clinical Aesthetics
+            </h2>
+            <p className="text-base text-charcoal/60 leading-relaxed max-w-xl">
+              At Cutisure, every service is expertly backed by board-certified specialists, with fully personalized treatment paths using premium-grade, clinical skincare lines.
             </p>
             <div className="flex -space-x-3">
                {[1, 2, 3, 4].map(i => (
@@ -35,7 +70,7 @@ export function About() {
             <p className="text-sm font-bold text-charcoal/40 uppercase tracking-widest">{t('about_page.hero.team_label')}</p>
           </div>
           <div className="relative">
-             <div className="relative rounded-[40px] overflow-hidden aspect-square shadow-2xl z-10">
+             <div className="relative rounded-[40px] overflow-hidden aspect-square shadow-xl z-10">
                <img
                  src={interiorImg}
                  alt="Cutisure Clinic"
@@ -43,9 +78,9 @@ export function About() {
                />
              </div>
 
-             <div className="absolute -bottom-10 -left-10 glass p-10 rounded-[32px] shadow-2xl z-20">
-                <div className="text-5xl font-serif text-primary font-bold">12+</div>
-                <p className="text-sm font-bold uppercase tracking-widest text-charcoal/40">{t('about_page.hero.years')}</p>
+             <div className="absolute -bottom-6 -left-6 glass p-8 rounded-[32px] shadow-xl z-20">
+                <div className="text-4xl font-serif text-primary font-bold">12+</div>
+                <p className="text-sm font-bold uppercase tracking-widest text-[#1F8D92]">{t('about_page.hero.years')}</p>
              </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, Clock, User, CheckCircle2, ChevronRight, ChevronLeft, Droplet, Zap, Sparkles, Waves } from 'lucide-react';
 import { format, addMonths, subMonths, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addDays } from 'date-fns';
 import { cn } from '../lib/utils';
+import { useTranslation } from 'react-i18next';
 
 const treatments = [
   { id: '1', title: 'HydraFacial Elite', duration: '60 min', price: '$199', icon: Droplet },
@@ -16,6 +17,7 @@ const timeSlots = [
 ];
 
 export function Book() {
+  const { t } = useTranslation();
   const [step, setStep] = useState(1);
   const [selectedTreatment, setSelectedTreatment] = useState<string | null>(null);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
@@ -33,12 +35,44 @@ export function Book() {
   const isConfirmed = step === 4;
 
   return (
-    <div className="pt-32 pb-20 px-6 bg-mint-light/30 min-h-screen">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif mb-4">Book Your <span className="text-primary italic">Cutisure Experience</span></h1>
-          <p className="text-charcoal/60">Follow the steps below to secure your clinical treatment.</p>
-        </div>
+    <div className="flex flex-col min-h-screen bg-mint-light/10">
+      {/* Hero Section Wrapper */}
+      <div className="bg-[#E6F8F9] pt-24 pb-4">
+        <section className="relative mx-4 sm:mx-6 md:mx-8 mt-4 mb-4 rounded-[32px] bg-[#A5E3E6] overflow-hidden py-16 md:py-20 px-8 md:px-16 lg:px-24 border border-[#ACE3E7]/40 shadow-sm">
+          {/* Soft Floral Watermark/Background */}
+          <div className="absolute inset-0 opacity-[0.55] pointer-events-none select-none">
+            <img 
+              src="https://images.unsplash.com/photo-1516238840914-94dfc0c3a5e8?auto=format&fit=crop&q=80&w=1800" 
+              className="w-full h-full object-cover"
+              alt=""
+            />
+            {/* Subtle fade overlay to preserve text contrast on the left & blend image perfectly */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#A5E3E6] via-[#A5E3E6]/60 to-transparent" />
+          </div>
+          
+          <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 w-full">
+            <div className="space-y-4 max-w-2xl">
+              <h1 className="text-4xl sm:text-5xl md:text-[56px] font-serif font-medium text-charcoal tracking-tight leading-tight">
+                Book Your <span className="italic text-[#1F8D92]">Cutisure Experience</span>
+              </h1>
+              <p className="text-charcoal/70 font-sans text-sm md:text-base leading-relaxed max-w-xl">
+                Follow the steps below to secure your clinical treatment or consultation with our specialists.
+              </p>
+            </div>
+            
+            <div className="bg-[#1F8D92] rounded-full px-6 py-3 md:px-8 md:py-4 flex items-center gap-3 text-white text-[11px] sm:text-[12px] font-sans font-bold uppercase tracking-[0.15em] shadow-[0_4px_20px_rgba(31,141,146,0.15)] select-none shrink-0">
+              <span className="opacity-80 hover:opacity-100 transition-opacity cursor-pointer">{t('contact_page.hero.breadcrumb.home')}</span>
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#D4E95F] text-[#1F8D92] shrink-0">
+                <ChevronRight size={11} className="stroke-[3.5]" />
+              </span>
+              <span className="text-[#D4E95F]">Book Online</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Book Content */}
+      <div className="flex-1 py-12 px-6 max-w-4xl mx-auto w-full">
 
         {/* Progress Bar */}
         <div className="flex items-center justify-between mb-12 max-w-md mx-auto relative px-4">

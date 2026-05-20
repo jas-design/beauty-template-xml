@@ -33,7 +33,7 @@ export function Hero() {
             <div className="relative z-10 w-full flex flex-col lg:flex-row items-center">
               {/* Left Text Side */}
               <div className="lg:w-3/5 p-10 md:p-16 space-y-6">
-                <h1 className="text-5xl md:text-6xl lg:text-[72px] font-serif font-bold text-[#1E4D4E] leading-[1.1] tracking-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-[67px] font-serif font-bold text-[#1E4D4E] leading-[1.1] tracking-tight">
                   {t('hero.title_line_1')}<br />
                   {t('hero.title_line_2')}
                 </h1>
