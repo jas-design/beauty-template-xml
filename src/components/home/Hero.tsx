@@ -1,10 +1,13 @@
 import { motion } from 'motion/react';
 import { Sparkles, Play, Stethoscope, Award, Phone, MessageSquare, Sparkle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import beautyModelImg from '../../assets/images/hero_beauty_model_1779219926576.png';
 import treatmentImg from '../../assets/images/treatment_skincare_1779219956804.png';
 
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-mint-light min-h-screen pt-32 pb-10 px-6">
       <div className="max-w-[1600px] mx-auto space-y-6">
@@ -31,18 +34,18 @@ export function Hero() {
               {/* Left Text Side */}
               <div className="lg:w-3/5 p-10 md:p-16 space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-[72px] font-serif font-bold text-[#1E4D4E] leading-[1.1] tracking-tight">
-                  Nurture Your Skin,<br />
-                  Reveal Your Beauty
+                  {t('hero.title_line_1')}<br />
+                  {t('hero.title_line_2')}
                 </h1>
                 <p className="text-sm md:text-base text-[#1E4D4E]/70 max-w-md leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                  {t('hero.description')}
                 </p>
                 <div className="pt-4">
                   <Link
                     to="/book"
                     className="inline-block px-8 py-4 bg-[#D4E964] text-charcoal rounded-full font-bold text-sm tracking-wide hover:brightness-105 transition-all shadow-sm"
                   >
-                    Book An Appointment
+                    {t('hero.cta')}
                   </Link>
                 </div>
               </div>
@@ -79,7 +82,7 @@ export function Hero() {
               
               <div className="px-1 border-l-2 border-[#2D999B] pl-4 py-1">
                 <h3 className="text-[22px] font-serif font-bold text-charcoal leading-tight">
-                  Dermatologist Talks: Skincare<br />Myths vs Facts
+                  {t('hero.video_title')}
                 </h3>
               </div>
 
@@ -105,9 +108,9 @@ export function Hero() {
                   </div>
                   <div className="flex flex-col ml-1">
                     <div className="text-white text-[13px] leading-tight">
-                      <span className="font-bold">23K+</span> <span className="opacity-80">User Glow with</span>
+                      <span className="font-bold">23K+</span> <span className="opacity-80">{t('hero.stats.text')}</span>
                     </div>
-                    <div className="text-white/80 text-[11px] font-medium">Confidents</div>
+                    <div className="text-white/80 text-[11px] font-medium">{t('hero.stats.labels')}</div>
                   </div>
                 </div>
               </div>
@@ -130,12 +133,12 @@ export function Hero() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-[32px] font-serif font-medium text-charcoal leading-tight">Modern Technology</h3>
+              <h3 className="text-[32px] font-serif font-medium text-charcoal leading-tight">{t('features.modern_tech.title')}</h3>
               <div className="w-12 h-0.5 bg-[#2D999B]/30" />
             </div>
             
             <p className="mt-10 text-charcoal/60 text-sm leading-relaxed max-w-[340px]">
-                Maximus imperdiet augue massa id ante cras nulla luctus. Venenatis vivamus potenti fermentum ultrices letius amet posuere imperdiet augue potenti.
+                {t('features.modern_tech.desc')}
             </p>
           </div>
 
@@ -150,21 +153,21 @@ export function Hero() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-[32px] font-serif font-medium text-white leading-tight">Certified Expert</h3>
+              <h3 className="text-[32px] font-serif font-medium text-white leading-tight">{t('features.expert.title')}</h3>
               <div className="w-12 h-0.5 bg-white/20" />
             </div>
 
             <p className="mt-10 text-white/70 text-sm leading-relaxed max-w-[340px]">
-                Maximus imperdiet augue massa id ante cras nulla luctus. Venenatis vivamus potenti fermentum ultrices letius amet posuere imperdiet augue potenti.
+                {t('features.expert.desc')}
             </p>
           </div>
 
           {/* Card 3: Consultation */}
           <div className="bg-dark-teal rounded-[40px] p-12 flex flex-col justify-between relative overflow-hidden min-h-[300px]">
             <div className="space-y-4 relative z-10">
-              <h3 className="text-3xl font-serif font-bold text-white leading-tight">Consultation with Our Doctor, Today!</h3>
+              <h3 className="text-3xl font-serif font-bold text-white leading-tight">{t('features.consultation.title')}</h3>
               <p className="text-white/60 text-sm max-w-sm leading-relaxed">
-                Pharetra pede inceptos duis vivamus maecenas. Pretium nibh nunc adipiscing per fames phasellus.
+                {t('features.consultation.desc')}
               </p>
             </div>
             

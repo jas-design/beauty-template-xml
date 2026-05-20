@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "title_line_1": "Cuide da sua Pele,",
+    "title_line_2": "Revele sua Beleza",
+    "description": "Excelência em cuidados com a pele e tratamentos estéticos. Combinamos expertise médica com atendimento de luxo para ajudar você a se sentir confiante.",
+    "cta": "Agende uma Consulta",
+    "video_title": "Dermatologistas Falam: Mitos vs Fatos sobre Skincare",
+    "stats": {
+      "text": "Usuários Brilhando com",
+      "labels": "Confiança"
+    }
+  },
+  "features": {
+    "modern_tech": {
+      "title": "Tecnologia Moderna",
+      "desc": "Utilizando equipamentos de última geração para resultados precisos e máximo benefício para a saúde da pele."
+    },
+    "expert": {
+      "title": "Especialista Certificado",
+      "desc": "Nossa equipe de dermatologistas certificados traz anos de experiência clínica para cada tratamento."
+    },
+    "consultation": {
+      "title": "Consulta com nosso Médico, Hoje!",
+      "desc": "Comece sua jornada para uma pele mais saudável com uma avaliação profissional de nossos especialistas."
+    }
+  },
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "about": "Sobre",
+    "contact": "Contato"
+  }
+}

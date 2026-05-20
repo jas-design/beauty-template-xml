@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "title_line_1": "Nurture Your Skin,",
+    "title_line_2": "Reveal Your Beauty",
+    "description": "Excellence in skincare and aesthetic treatments. We combine medical expertise with luxury care to help you feel confident in your own skin.",
+    "cta": "Book An Appointment",
+    "video_title": "Dermatologist Talks: Skincare Myths vs Facts",
+    "stats": {
+      "text": "User Glow with",
+      "labels": "Confidents"
+    }
+  },
+  "features": {
+    "modern_tech": {
+      "title": "Modern Technology",
+      "desc": "Utilizing state-of-the-art equipment for precise results and maximum skin health benefit."
+    },
+    "expert": {
+      "title": "Certified Expert",
+      "desc": "Our team of board-certified dermatologists brings years of clinical experience to every treatment."
+    },
+    "consultation": {
+      "title": "Consultation with Our Doctor, Today!",
+      "desc": "Start your journey to healthier skin with a professional assessment from our specialists."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  }
+}

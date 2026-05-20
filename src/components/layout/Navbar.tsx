@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Phone, Mail, ChevronDown, Sparkle, Sparkles } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDown, Sparkle, Sparkles, Globe } from 'lucide-react';
 import { cn } from '../../lib/utils';
+import { useTranslation } from 'react-i18next';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -15,6 +16,12 @@ const navLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === 'en' ? 'pt-BR' : 'en';
+    i18n.changeLanguage(nextLang);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 h-24 flex items-center">
@@ -52,6 +59,15 @@ export function Navbar() {
               {link.hasDropdown && <ChevronDown size={14} className="opacity-40" />}
             </Link>
           ))}
+          
+          {/* Language Switcher */}
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 px-3 py-1.5 bg-gray-50 rounded-full text-[11px] font-bold text-charcoal hover:bg-primary/10 hover:text-primary transition-all border border-gray-100"
+          >
+            <Globe size={14} />
+            <span>{i18n.language === 'en' ? 'EN' : 'PT'}</span>
+          </button>
         </div>
 
         {/* Contact Info Group */}
@@ -80,12 +96,21 @@ export function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="lg:hidden p-2 text-charcoal"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 lg:hidden">
+            <button 
+                onClick={toggleLanguage}
+                className="flex items-center gap-2 px-3 py-1.5 bg-gray-50 rounded-full text-[11px] font-bold text-charcoal"
+            >
+                <Globe size={14} />
+                <span>{i18n.language === 'en' ? 'EN' : 'PT'}</span>
+            </button>
+            <button
+                className="p-2 text-charcoal"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
