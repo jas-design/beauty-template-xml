@@ -1,51 +1,54 @@
 import { motion } from 'motion/react';
 import { Syringe, User, Scissors, HeartPulse, Maximize2, MoveUp, Sparkles } from 'lucide-react';
-
-const leftServices = [
-  { 
-    title: 'Face Treatment', 
-    icon: User, 
-    desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
-  },
-  { 
-    title: 'Filler & Botox', 
-    icon: Syringe, 
-    desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
-  },
-  { 
-    title: 'Plastic Surgery', 
-    icon: Scissors, 
-    desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
-  }
-];
-
-const rightServices = [
-  { 
-    title: 'Body Treatment', 
-    icon: HeartPulse, 
-    desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
-  },
-  { 
-    title: 'Breast Implant', 
-    icon: Maximize2, 
-    desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
-  },
-  { 
-    title: 'Lip Augmentation', 
-    icon: MoveUp, 
-    desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function ServiceShowcase() {
+  const { t } = useTranslation();
+
+  const leftServices = [
+    { 
+      title: t('services_preview.service_list.face'), 
+      icon: User, 
+      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+    },
+    { 
+      title: t('services_preview.service_list.filler'), 
+      icon: Syringe, 
+      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+    },
+    { 
+      title: t('services_preview.service_list.plastic'), 
+      icon: Scissors, 
+      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+    }
+  ];
+
+  const rightServices = [
+    { 
+      title: t('services_preview.service_list.body'), 
+      icon: HeartPulse, 
+      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+    },
+    { 
+      title: t('services_preview.service_list.breast'), 
+      icon: Maximize2, 
+      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+    },
+    { 
+      title: t('services_preview.service_list.lip'), 
+      icon: MoveUp, 
+      desc: 'Leo purus eu orci tincidunt torquent. Lectus nibh aliquam vitae interdum a penatibus.' 
+    }
+  ];
+
   return (
     <section className="py-24 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center space-y-4 mb-20">
-          <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">OUR SERVICES</div>
-          <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight mt-2">Elevate Your Skin with Expert Treatment</h2>
+          <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">{t('services_preview.badge')}</div>
+          <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight mt-2">{t('services_preview.title')}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
-            Ultricies auctor aptent imperdiet venenatis volutpat ornare ante enim vel nec facilisis. Ac tempor quisque egestas molestie tortor.
+            {t('services_preview.description')}
           </p>
         </div>
 

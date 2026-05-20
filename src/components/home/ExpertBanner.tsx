@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { Flower2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function ExpertBanner() {
+  const { t } = useTranslation();
   return (
     <section className="relative py-40 overflow-hidden flex items-center justify-center min-h-[500px]">
       <div className="absolute inset-0">
@@ -30,7 +32,7 @@ export function ExpertBanner() {
            transition={{ delay: 0.1 }}
            className="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.1] font-medium"
          >
-            Expert Skin Doctors Dedicated to <br className="hidden md:block" /> Your Beauty
+            {t('expert_banner.title')}
          </motion.h2>
 
          <motion.div 
@@ -41,10 +43,10 @@ export function ExpertBanner() {
            className="space-y-1"
          >
             <p className="text-sm md:text-base font-light tracking-wide text-white/90">
-               Scelerisque non suspendisse conubia tincidunt efficitur nibh posuere.
+               {t('expert_banner.desc_1')}
             </p>
             <p className="text-sm md:text-base font-light tracking-wide text-white/90">
-               Habitant lacinia etiam venenatis magna.
+               {t('expert_banner.desc_2')}
             </p>
          </motion.div>
 

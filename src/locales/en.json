@@ -1,4 +1,22 @@
 {
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "customer_support": "Customer Support",
+    "email_support": "Email Support"
+  },
+  "footer": {
+    "description": "Risus eleifend erat placerat tempor nisl mattis nibh turpis natoqe facilisis pellentesque eu.",
+    "contact_title": "Contact Info",
+    "services_title": "Our Services",
+    "links_title": "Quick Links",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "copyright": "Copyright © 2026 Cutisure by TBWBthemes. All rights reserved."
+  },
   "hero": {
     "title_line_1": "Nurture Your Skin,",
     "title_line_2": "Reveal Your Beauty",
@@ -24,10 +42,141 @@
       "desc": "Start your journey to healthier skin with a professional assessment from our specialists."
     }
   },
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About",
-    "contact": "Contact"
+  "expert_banner": {
+    "title": "Expert Skin Doctors Dedicated to Your Beauty",
+    "desc_1": "Scelerisque non suspendisse conubia tincidunt efficitur nibh posuere.",
+    "desc_2": "Habitant lacinia etiam venenatis magna."
+  },
+  "services_preview": {
+    "badge": "OUR SERVICES",
+    "title": "Elevate Your Skin with Expert Treatment",
+    "description": "Ultricies auctor aptent imperdiet venenatis volutpat ornare ante enim vel nec facilisis. Ac tempor quisque egestas molestie tortor.",
+    "service_list": {
+      "face": "Face Treatment",
+      "filler": "Filler & Botox",
+      "plastic": "Plastic Surgery",
+      "body": "Body Treatment",
+      "breast": "Breast Implant",
+      "lip": "Lip Augmentation"
+    }
+  },
+  "why_choose_us": {
+    "badge": "WHY CHOOSE US",
+    "title": "Where Professional Care Meets Healthy Skin",
+    "description": "Integer odio orci senectus porttitor dignissim pellentesque condimentum tincidunt lacus habitant dis. Facilisis lacinia suspendisse inceptos diam curabitur tristique maecenas torquent egestas luctus aenean commodo.",
+    "benefits": {
+      "safe": "Safe Treatments",
+      "equip": "Advanced Equipment & Facilities",
+      "support": "24/7 Premium Support"
+    },
+    "stats": "Satisfied Patients"
+  },
+  "cta_banner": {
+    "title": "Get Free Consultation",
+    "description": "Egestas taciti vulputate adipiscing purus posuere suspendisse lectus luctus.",
+    "title_large": "Your Journey to Better Skin Starts Here",
+    "description_large": "Expert clinical care tailored to your unique skin needs. Join our community of healthy skin lovers."
+  },
+  "about_page": {
+    "hero": {
+      "badge": "Our Story",
+      "title_1": "Redefining",
+      "title_2": "Clinical Excellence",
+      "title_3": "In Beauty",
+      "description": "Founded in 2012, Cutisure Beauty Clinic was born from a simple vision: to bridge the gap between clinical dermatology and a luxury spa experience.",
+      "team_label": "Meet our award-winning team of 15+ specialists",
+      "years": "Years of History"
+    },
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "desc": "We invest in the latest FDA-approved technology to ensure the best clinical outcomes."
+      },
+      "precision": {
+        "title": "Precision",
+        "desc": "Every skin is unique. Our treatments are highly personalized to your specific cellular needs."
+      },
+      "care": {
+        "title": "Care",
+        "desc": "We prioritize patient safety and comfort above all else, creating a sanctuary for your skin."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "desc": "Our specialists are continuously trained in the most advanced aesthetic techniques."
+      }
+    },
+    "team": {
+      "badge": "Expertise You Can Trust",
+      "title": "Meet the Specialists",
+      "cta": "Join our skin community"
+    }
+  },
+  "services_page": {
+    "hero": {
+      "badge": "Advanced Skincare",
+      "title_1": "Precision Treatments for",
+      "title_2": "Every Skin Concern",
+      "description": "Our menu of services is designed to deliver visible, medical-grade results while ensuring absolute comfort and luxury at Cutisure Beauty Clinic.",
+      "cta": "Book a Consultation"
+    },
+    "categories": {
+      "facial": "Facial Treatments",
+      "medical": "Medical Aesthetics",
+      "laser": "Laser & Performance"
+    },
+    "actions": {
+      "from": "From",
+      "by_consult": "By Consult",
+      "book_now": "Book Now"
+    },
+    "footer_note": {
+      "title": "Not sure what you need?",
+      "desc": "Our skin specialists offer complimentary 15-minute consultations to help you find the perfect treatment path for your goals.",
+      "items": ["Personalized Care", "Clinical Excellence", "Luxury Experience"]
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Contact Us",
+      "description": "Mattis mauris posuere habitant ad netus platea taciti. Aptent libero sociosqu porta sit etiam diam sed sagittis.",
+      "breadcrumb": {
+        "home": "HOME",
+        "contact": "CONTACT US"
+      }
+    },
+    "form": {
+      "title": "Let's start talking with us",
+      "description": "Ridiculus nam nec dapibus lobortis elementum magnis placerat semper vivamus. Placerat cras rhoncus praesent vivamus tristique maximus laoreet.",
+      "labels": {
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message"
+      },
+      "placeholders": {
+        "first_name": "e.g. John",
+        "last_name": "e.g. Doe",
+        "email": "e.g. johndoe@yourmail.com",
+        "phone": "e.g. (+1) 234–567–8910",
+        "message": "Write your message..."
+      },
+      "submit": "Send Message",
+      "badge": "Dermatology Skin Care",
+      "sub_badge": "Pure Derma Care"
+    },
+    "info": {
+      "contact": {
+        "title": "Our Contact",
+        "phone_1": "Phone 1",
+        "phone_2": "Phone 2"
+      },
+      "location": {
+        "title": "Our Location"
+      },
+      "mail": {
+        "title": "Mail Address"
+      }
+    }
   }
 }

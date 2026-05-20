@@ -1,4 +1,22 @@
 {
+  "nav": {
+    "home": "Início",
+    "about": "Sobre Nós",
+    "services": "Serviços",
+    "blog": "Blog",
+    "contact": "Contato",
+    "customer_support": "Suporte ao Cliente",
+    "email_support": "Suporte por E-mail"
+  },
+  "footer": {
+    "description": "Cuidado especializado para a sua pele com tecnologia de ponta e atendimento humanizado.",
+    "contact_title": "Informações de Contato",
+    "services_title": "Nossos Serviços",
+    "links_title": "Links Rápidos",
+    "email_label": "E-mail",
+    "phone_label": "Telefone",
+    "copyright": "Copyright © 2026 Cutisure por TBWBthemes. Todos os direitos reservados."
+  },
   "hero": {
     "title_line_1": "Cuide da sua Pele,",
     "title_line_2": "Revele sua Beleza",
@@ -24,10 +42,141 @@
       "desc": "Comece sua jornada para uma pele mais saudável com uma avaliação profissional de nossos especialistas."
     }
   },
-  "nav": {
-    "home": "Início",
-    "services": "Serviços",
-    "about": "Sobre",
-    "contact": "Contato"
+  "expert_banner": {
+    "title": "Dermatologistas Especialistas Dedicados à Sua Beleza",
+    "desc_1": "Excelência clínica e tecnologia de ponta para resultados surpreendentes.",
+    "desc_2": "Cuidando da sua pele com paixão e precisão."
+  },
+  "services_preview": {
+    "badge": "NOSSOS SERVIÇOS",
+    "title": "Eleve sua Pele com Tratamentos Especializados",
+    "description": "Tratamentos personalizados para realçar sua autoconfiança e saúde dermatológica.",
+    "service_list": {
+      "face": "Tratamento Facial",
+      "filler": "Preenchimento e Botox",
+      "plastic": "Cirurgia Plástica",
+      "body": "Tratamento Corporal",
+      "breast": "Implante de Mama",
+      "lip": "Aumento de Lábios"
+    }
+  },
+  "why_choose_us": {
+    "badge": "POR QUE NOS ESCOLHER",
+    "title": "Onde o Cuidado Profissional Encontra a Pele Saudável",
+    "description": "Oferecemos os tratamentos mais avançados com foco total na segurança e no bem-estar do paciente.",
+    "benefits": {
+      "safe": "Tratamentos Seguros",
+      "equip": "Equipamentos e Instalações de Ponta",
+      "support": "Suporte Premium 24/7"
+    },
+    "stats": "Pacientes Satisfeitos"
+  },
+  "cta_banner": {
+    "title": "Ganhe uma Consulta Gratuita",
+    "description": "Dê o primeiro passo para a pele dos seus sonhos com nossos especialistas.",
+    "title_large": "Sua Jornada para uma Pele Melhor Começa Aqui",
+    "description_large": "Cuidados clínicos especializados adaptados às suas necessidades únicas de pele. Junte-se à nossa comunidade."
+  },
+  "about_page": {
+    "hero": {
+      "badge": "Nossa História",
+      "title_1": "Redefinindo a",
+      "title_2": "Excelência Clínica",
+      "title_3": "na Estética",
+      "description": "Fundada em 2012, a Clínica Cutisure nasceu de uma visão simples: unir a dermatologia clínica à experiência de um spa de luxo.",
+      "team_label": "Conheça nossa equipe premiada de mais de 15 especialistas",
+      "years": "Anos de História"
+    },
+    "values": {
+      "innovation": {
+        "title": "Inovação",
+        "desc": "Investimos na mais recente tecnologia aprovada pela ANVISA para garantir os melhores resultados clínicos."
+      },
+      "precision": {
+        "title": "Precisão",
+        "desc": "Cada pele é única. Nossos tratamentos são altamente personalizados para suas necessidades específicas."
+      },
+      "care": {
+        "title": "Cuidado",
+        "desc": "Priorizamos a segurança e o conforto do paciente acima de tudo, criando um santuário para sua pele."
+      },
+      "excellence": {
+        "title": "Excelência",
+        "desc": "Nossos especialistas estão em constante treinamento nas técnicas estéticas mais avançadas."
+      }
+    },
+    "team": {
+      "badge": "Expertise em que Você Pode Confiar",
+      "title": "Conheça os Especialistas",
+      "cta": "Junte-se à nossa comunidade"
+    }
+  },
+  "services_page": {
+    "hero": {
+      "badge": "Skincare Avançado",
+      "title_1": "Tratamentos de Precisão para",
+      "title_2": "Cada Problema de Pele",
+      "description": "Nosso menu de serviços foi projetado para entregar resultados visíveis e de nível médico com total conforto e luxo.",
+      "cta": "Agendar uma Consulta"
+    },
+    "categories": {
+      "facial": "Tratamentos Faciais",
+      "medical": "Estética Médica",
+      "laser": "Laser e Performance"
+    },
+    "actions": {
+      "from": "A partir de",
+      "by_consult": "Sob Consulta",
+      "book_now": "Agende Agora"
+    },
+    "footer_note": {
+      "title": "Não tem certeza do que precisa?",
+      "desc": "Nossos especialistas oferecem consultas gratuitas de 15 minutos para ajudar você a encontrar o caminho perfeito.",
+      "items": ["Cuidado Personalizado", "Excelência Clínica", "Experiência de Luxo"]
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Contato",
+      "description": "Estamos aqui para ajudar você a conquistar a pele dos seus sonhos. Entre em contato conosco.",
+      "breadcrumb": {
+        "home": "INÍCIO",
+        "contact": "CONTATO"
+      }
+    },
+    "form": {
+      "title": "Vamos começar a conversar",
+      "description": "Preencha o formulário abaixo e nossa equipe entrará em contato com você o mais rápido possível.",
+      "labels": {
+        "first_name": "Nome",
+        "last_name": "Sobrenome",
+        "email": "E-mail",
+        "phone": "Telefone",
+        "message": "Mensagem"
+      },
+      "placeholders": {
+        "first_name": "ex: João",
+        "last_name": "ex: Silva",
+        "email": "ex: joao@seuemail.com",
+        "phone": "ex: (11) 98765-4321",
+        "message": "Escreva sua mensagem..."
+      },
+      "submit": "Enviar Mensagem",
+      "badge": "Dermatologia e Estética",
+      "sub_badge": "Cuidado Puro com a Pele"
+    },
+    "info": {
+      "contact": {
+        "title": "Nosso Contato",
+        "phone_1": "Telefone 1",
+        "phone_2": "Telefone 2"
+      },
+      "location": {
+        "title": "Nossa Localização"
+      },
+      "mail": {
+        "title": "E-mail"
+      }
+    }
   }
 }

@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Twitter, Youtube, Wind } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-[#0D403D] bg-[radial-gradient(circle_at_center,_#125754_0%,_#0D403D_100%)] pt-24 pb-12 px-6 md:px-12 text-white">
       <div className="max-w-7xl mx-auto">
@@ -22,7 +24,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed font-light">
-              Risus eleifend erat placerat tempor nisl mattis nibh turpis natoqe facilisis pellentesque eu.
+              {t('footer.description')}
             </p>
             <div className="flex items-center gap-4">
               {[Facebook, Twitter, Instagram, Youtube].map((Icon, idx) => (
@@ -40,7 +42,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
              <h4 className="text-xl font-medium font-serif mb-4 flex flex-col">
-               Contact Info
+               {t('footer.contact_title')}
                <span className="w-10 h-[2px] bg-[#D4E95F] mt-3" />
              </h4>
              <ul className="space-y-6 text-sm text-white/70 font-light mt-8">
@@ -48,11 +50,11 @@ export function Footer() {
                    Golden Tower – 789 Oak St,<br />Smalltown, TX 23456, US
                 </li>
                 <li>
-                   <strong className="text-white font-semibold block mb-1">Email</strong>
+                   <strong className="text-white font-semibold block mb-1">{t('footer.email_label')}</strong>
                    <span className="hover:text-[#D4E95F] transition-colors cursor-pointer">hello@cutisure.com</span>
                 </li>
                 <li>
-                   <strong className="text-white font-semibold block mb-1">Phone</strong>
+                   <strong className="text-white font-semibold block mb-1">{t('footer.phone_label')}</strong>
                    <span className="hover:text-[#D4E95F] transition-colors cursor-pointer">+1 (234) 567–8910</span>
                 </li>
              </ul>
@@ -61,7 +63,7 @@ export function Footer() {
           {/* Our Services */}
           <div>
              <h4 className="text-xl font-medium font-serif mb-4 flex flex-col">
-               Our Services
+               {t('footer.services_title')}
                <span className="w-10 h-[2px] bg-[#D4E95F] mt-3" />
              </h4>
              <ul className="space-y-4 text-sm text-white/70 font-light mt-8">
@@ -74,7 +76,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
              <h4 className="text-xl font-medium font-serif mb-4 flex flex-col">
-               Quick Links
+               {t('footer.links_title')}
                <span className="w-10 h-[2px] bg-[#D4E95F] mt-3" />
              </h4>
              <ul className="space-y-4 text-sm text-white/70 font-light mt-8">
@@ -88,7 +90,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="pt-10 border-t border-white/10 text-center">
           <p className="text-[11px] font-medium text-white/40 tracking-wide">
-            Copyright © 2026 <span className="text-white">Cutisure</span> by TBWBthemes. All rights reserved.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

@@ -6,11 +6,11 @@ import { cn } from '../../lib/utils';
 import { useTranslation } from 'react-i18next';
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Services', href: '/services', hasDropdown: true },
-  { name: 'Blog', href: '/blog', hasDropdown: true },
-  { name: 'Pages', href: '#', hasDropdown: true },
+  { name: 'nav.home', href: '/' },
+  { name: 'nav.about', href: '/about' },
+  { name: 'nav.services', href: '/services', hasDropdown: true },
+  { name: 'nav.blog', href: '/blog', hasDropdown: true },
+  { name: 'nav.contact', href: '/contact' },
 ];
 
 export function Navbar() {
@@ -55,7 +55,7 @@ export function Navbar() {
                 location.pathname === link.href ? 'text-primary' : 'text-charcoal'
               )}
             >
-              {link.name}
+              {t(link.name)}
               {link.hasDropdown && <ChevronDown size={14} className="opacity-40" />}
             </Link>
           ))}
@@ -77,7 +77,7 @@ export function Navbar() {
               <Phone size={20} />
             </div>
             <div className="flex flex-col whitespace-nowrap">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider leading-tight">Customer Support</span>
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider leading-tight">{t('nav.customer_support', 'Customer Support')}</span>
               <span className="text-sm font-bold text-charcoal leading-tight">+1 (234) 567-8910</span>
             </div>
           </div>
@@ -89,7 +89,7 @@ export function Navbar() {
               <Mail size={20} />
             </div>
             <div className="flex flex-col whitespace-nowrap">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider leading-tight">Email Support</span>
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider leading-tight">{t('nav.email_support', 'Email Support')}</span>
               <span className="text-sm font-bold text-charcoal leading-tight">hello@cutisure.com</span>
             </div>
           </div>
@@ -132,7 +132,7 @@ export function Navbar() {
                 )}
                 onClick={() => setIsOpen(false)}
               >
-                {link.name}
+                {t(link.name)}
               </Link>
             ))}
           </motion.div>

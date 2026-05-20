@@ -1,34 +1,37 @@
 import { HeartPulse, Stethoscope, MessageSquareMore, CheckCircle2, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
-
-const benefits = [
-  { 
-    title: "Safe Treatments", 
-    icon: HeartPulse,
-    desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
-  },
-  { 
-    title: "Advanced Equipment & Facilities", 
-    icon: Stethoscope,
-    desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
-  },
-  { 
-    title: "24/7 Premium Support", 
-    icon: MessageSquareMore,
-    desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function WhyChooseUs() {
+  const { t } = useTranslation();
+
+  const benefits = [
+    { 
+      title: t('why_choose_us.benefits.safe'), 
+      icon: HeartPulse,
+      desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
+    },
+    { 
+      title: t('why_choose_us.benefits.equip'), 
+      icon: Stethoscope,
+      desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
+    },
+    { 
+      title: t('why_choose_us.benefits.support'), 
+      icon: MessageSquareMore,
+      desc: "Ligula in magnis commodo sociosqu facilisi leo suspendisse libero netus. Dis bibendum mi est ornare quam per eu." 
+    }
+  ];
+
   return (
     <section className="pt-40 pb-24 bg-white relative z-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="space-y-12">
           <div className="space-y-4 text-center lg:text-left">
-            <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">WHY CHOOSE US</div>
-            <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight">Where Professional Care Meets Healthy Skin</h2>
+            <div className="text-[#2D999B] font-bold uppercase tracking-[0.3em] text-[10px]">{t('why_choose_us.badge')}</div>
+            <h2 className="text-[52px] font-serif text-[#1A1A1A] leading-tight">{t('why_choose_us.title')}</h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xl">
-              Integer odio orci senectus porttitor dignissim pellentesque condimentum tincidunt lacus habitant dis. Facilisis lacinia suspendisse inceptos diam curabitur tristique maecenas torquent egestas luctus aenean commodo.
+              {t('why_choose_us.description')}
             </p>
           </div>
 
@@ -71,7 +74,7 @@ export function WhyChooseUs() {
               {/* Stats Box */}
               <div className="mt-6 bg-[#E3F5F5] rounded-[20px] p-6 w-full text-center">
                 <div className="text-[48px] font-serif font-medium text-[#2D999B] leading-none mb-3">97%</div>
-                <div className="text-[13px] font-bold text-gray-500 font-sans tracking-tight">Satisfied Patients</div>
+                <div className="text-[13px] font-bold text-gray-500 font-sans tracking-tight">{t('why_choose_us.stats')}</div>
               </div>
            </motion.div>
         </div>
