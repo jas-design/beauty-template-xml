@@ -17,7 +17,8 @@ i18n
         translation: ptTranslations,
       },
     },
-    fallbackLng: 'en',
+    lng: typeof window !== 'undefined' ? localStorage.getItem('i18nextLng') || 'pt-BR' : 'pt-BR',
+    fallbackLng: 'pt-BR',
     interpolation: {
       escapeValue: false, // react already safes from xss
     },
